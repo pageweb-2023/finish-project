@@ -44,7 +44,7 @@ plt.grid(True)
 plt.xticks(rotation=90)
 
 plt.title('aves en el pais')
-plt.show()
+
 
 
 
