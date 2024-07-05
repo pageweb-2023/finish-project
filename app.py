@@ -22,28 +22,10 @@ def boyaca():
 def cundinamarca():
     return render_template('CUNDINAMARCA.html')
 
-@app.route('/otros')
-def otros():
-    return render_template('OTROS.html')
+@app.route('/aves')
+def aves():
+    return render_template('AVES.html')
 
-proyect = pd.read_csv('aves.csv')
-
-df = pd.DataFrame(proyect)
-
-print(df.head())
-
-sns.pairplot(data=df,
-            hue='indicador')
-sns.catplot(data=df,
-            x='slug_region',
-            y='count',
-            )
-
-plt.grid(True)
-
-plt.xticks(rotation=90)
-
-plt.title('aves en el pais')
 
 
 
