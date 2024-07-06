@@ -15,7 +15,13 @@ filtrado = df3[df3['label_region'].isin(['Agua de Dios',
 
 sns.pairplot(data= df3,
              hue='indicador',)
-
+plt.plot(filtrado['count'],
+         filtrado['label_region'],)
+sns.catplot(data=filtrado,
+              x='label_region',
+              y='count',
+              kind='bar',
+              )
 plt.xticks(rotation=90)
 
 plt.savefig('static/imgGraficas/biocund2')
